@@ -2,6 +2,7 @@ package com.usuario;
 
 public class Usuario {
 
+    private int id;
     private  String name;
     private  String email;
 
@@ -9,9 +10,18 @@ public class Usuario {
 
     }
 
-    public Usuario(String name, String email) {
+    public Usuario(int id, String name, String email) {
+        this.id = id;
         this.name = name;
         this.email = email;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -33,7 +43,8 @@ public class Usuario {
     @Override
     public String toString() {
         return "Usuario{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 '}';
     }
