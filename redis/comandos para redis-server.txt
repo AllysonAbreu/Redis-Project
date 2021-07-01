@@ -1,0 +1,2 @@
+Iniciar o servidor: docker start redis-server
+Abrir o cliente via terminal: docker run -it --network redis-network --rm redis redis-cli -h redis-server
