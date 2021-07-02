@@ -23,7 +23,8 @@ public class RascunhoDao {
         return false;
     }
     public Rascunho buscarRascunho(int id){
-        String json = String.valueOf(id);
+        String parseId = String.valueOf(id);
+        String json = jedis.get(parseId);
 
         if(json == null) {
             return null;
